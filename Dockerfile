@@ -23,12 +23,13 @@ RUN echo "deb http://overviewer.org/debian ./" >> /etc/apt/sources.list && \
 
 COPY config/config.py /home/minecraft/config.py
 COPY entrypoint.sh /home/minecraft/entrypoint.sh
-COPY fix-uid.sh /home/minecraft/fix-uid.sh
 
-RUN chown minecraft:minecraft -R /home/minecraft/
+# I don't have time for this permission BS right now
+RUN chown root:root -R /home/minecraft
+#RUN chown minecraft:minecraft -R /home/minecraft/
 
 WORKDIR /home/minecraft/
 
-USER minecraft
+#USER minecraft
 
 CMD ["bash", "/home/minecraft/entrypoint.sh"]

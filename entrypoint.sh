@@ -8,7 +8,7 @@ if [ -z "$MINECRAFT_VERSION" ]; then
 fi
 
 # Download Minecraft client .jar (Contains textures used by Minecraft Overviewer)
-wget https://s3.amazonaws.com/Minecraft.Download/versions/${MINECRAFT_VERSION}/${MINECRAFT_VERSION}.jar -P /home/minecraft/.minecraft/versions/${MINECRAFT_VERSION}/
+wget https://s3.amazonaws.com/Minecraft.Download/versions/${MINECRAFT_VERSION}/${MINECRAFT_VERSION}.jar -P ~/.minecraft/versions/${MINECRAFT_VERSION}/
 
 while :
 do
